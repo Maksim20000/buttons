@@ -1,0 +1,34 @@
+<style>
+/* Линии при наведении */
+.btn-3 > a:hover {
+  color: #ffa000 !important; /*Задаем цвет текста при наведении*/
+  background: transparent !important;
+   box-shadow:none !important;
+}
+.btn-3 > a:before,
+.btn-3 > a:after{
+  content:'';
+  position:absolute;
+  top:0;
+  right:0;
+  height:2px; /* Задаем толщину линий*/
+  width:0;
+  background: rgb(255, 160, 0); /*Задаем цвет линий при наведении*/
+  box-shadow:
+   -1px -1px 5px 0px #fff,
+   7px 7px 20px 0px #0003,
+   4px 4px 5px 0px #ffa000; /*Цвети теней линий при наведении. Можно скопировать из фигмы по примеру*/
+  transition:400ms ease all;
+}
+.btn-3 > a:after{
+  right:inherit;
+  top:inherit;
+  left:0;
+  bottom:0;
+}
+.btn-3 > a:hover:before,
+.btn-3 > a:hover:after{
+  width:100%;
+  transition:800ms ease all;
+}
+</style>
