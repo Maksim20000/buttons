@@ -1,0 +1,31 @@
+<style>
+/* Переключение цвета фона слева направо */
+.btn-9 > a {
+  z-index: 1;
+  position: relative;
+}
+.btn-9 > a:after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 100%;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  background-color: #663dff; /* Цвет фона при наведении*/
+   box-shadow:inset 2px 2px 2px 0px rgba(255,255,255,.5),
+   7px 7px 20px 0px rgba(0,0,0,.1),
+   4px 4px 5px 0px rgba(0,0,0,.1); /*Тени при наведении (брать в фигме)*/
+  transition: all 0.3s ease;
+}
+.btn-9 > a:hover {
+  color: #fff !important; /*Цвет текста при наведении*/
+}
+.btn-9 > a:hover:after {
+  left: 0;
+  width: 100%;
+}
+.btn-9 > a:active {
+  top: 2px;
+}
+</style>
